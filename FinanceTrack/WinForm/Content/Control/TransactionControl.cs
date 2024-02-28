@@ -60,6 +60,7 @@ namespace FinanceTrack.WinForm.Content.Control
                 .Include(x => x.Account)
                     .ThenInclude(x => x.Type)
                 .Where(x => x.UserId == _user.Id)
+                .OrderBy(x => x.Date)
                 .ToList();
 
             _categoryTransactions = db.CategoryTransaction
@@ -261,7 +262,7 @@ namespace FinanceTrack.WinForm.Content.Control
                 transaction.UserId = _user.Id;
 
                 account.Balance += transaction.GetPayment(icbCategory.GetItem<CategoryTransaction>().Type);
-                
+
                 db.Transaction.Add(transaction);
 
                 db.SaveChanges();

@@ -444,12 +444,12 @@ namespace FinanceTrack.WinForm.Content.Control
             nbcAmount.TabIndex = 0;
             nbcAmount.TypeName = "System.Decimal";
             // 
-            // TransactionContentControl
+            // TransactionControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(tableLayoutPanel1);
-            Name = "TransactionContentControl";
+            Name = "TransactionControl";
             Size = new Size(917, 666);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
